@@ -2,9 +2,15 @@
 #include "stdlib.h"
 #include "modulib.h"
 
-static void plugin_init(void) { printf("init\n"); }
-static void plugin_update(float delta) { printf("update %.3f\n", delta); }
-static void plugin_shutdown(void) { printf("shutdown\n"); }
+static void plugin_init(void) {
+    printf("[plugin_sample] init\n");
+}
+static void plugin_update(float delta) {
+    printf("[plugin_sample] update %.3f\n", delta);
+}
+static void plugin_shutdown(void) {
+    printf("[plugin_sample] shutdown\n");
+}
 
 static PluginAPI api = {
     .init = plugin_init,
